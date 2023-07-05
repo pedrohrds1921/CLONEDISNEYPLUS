@@ -1,0 +1,26 @@
+{
+  "name": "clonedisneyplus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build":"gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrohrds1921/CLONEDISNEYPLUS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedrohrds1921/CLONEDISNEYPLUS/issues"
+  },
+  "homepage": "https://github.com/pedrohrds1921/CLONEDISNEYPLUS#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.63.6"
+  }
+}
