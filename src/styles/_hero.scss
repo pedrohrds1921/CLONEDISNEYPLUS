@@ -1,0 +1,50 @@
+@use 'variables';
+.hero{
+    padding: 5.6vw;
+    width: 100%;
+    min-height: 98vh;
+    background-image: url(../../images/CapaDesktop.jpeg);
+    background-size: cover;
+    text-align: center;
+    &__Content{
+        max-width: 640px;
+
+        &__branding{
+            max-width: 320px;
+            margin: 0 auto 38px;
+            
+        }
+        .title--Small{
+            margin-bottom: 64px;
+        }
+        p{
+            margin-bottom: 20px;
+        }
+        &__combos{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 64px;
+
+            &__combo{
+                width: calc(50% - 12px);
+
+                img{
+                    max-width: 320px;
+                        height: 65px;
+                }
+                button{
+                    display: block;
+                    width: 100%;
+                    height: 60px;
+                    color:variables.$TextPrimartColor ;
+                    background-color: #6421ff;
+                    text-transform: uppercase;
+                    border-radius: 4px;
+                    margin-top: 2vw;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+
+    }
+}

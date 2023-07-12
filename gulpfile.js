@@ -1,5 +1,6 @@
 const gulp=require('gulp')
 const sass=require('gulp-sass')(require('sass'))
+const imagemin=require('gulp-imagemin')
 
 
 
@@ -9,7 +10,13 @@ const styles=()=>{
     .pipe(gulp.dest('./dist/css'))
 }
 
-exports.default=styles
+
+const images=()=>{
+    return gulp.src('./images/**/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('./dist/images'))
+}
+exports.default=gulp.parallel(styles,images)
 
 exports.watch = function(){
 
