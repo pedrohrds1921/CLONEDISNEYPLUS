@@ -6,13 +6,28 @@
     background-image: url(../../images/CapaDesktop.jpeg);
     background-size: cover;
     text-align: center;
+    @media(max-width: 768px){
+       background-image: url(../../dist/images/CapaMobile.jpeg);
+       padding-top: calc(50vw + 25px);
+       background-size: contain;
+       background-repeat: no-repeat;
+       margin-top: -55px;
+    }
+    .button{
+        margin-top: 2vw;
+        margin-bottom: 8px;
+    }
     &__Content{
         max-width: 640px;
 
         &__branding{
             max-width: 320px;
             margin: 0 auto 38px;
-            
+            @media(max-width: 768px){
+                
+                max-width: 180px;
+
+            }
         }
         .title--Small{
             margin-bottom: 64px;
@@ -25,8 +40,16 @@
             justify-content: space-between;
             margin-bottom: 64px;
 
+            @media(max-width: 768px){
+               display: block;
+            }
+
             &__combo{
                 width: calc(50% - 12px);
+                @media(max-width: 768px){
+                    width: 100%;
+                   
+                 }
 
                 img{
                     max-width: 320px;

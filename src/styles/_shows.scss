@@ -7,9 +7,11 @@
         display: none;
         grid-template-columns: repeat(3, 1fr);
         gap: 24px;
-
         -webkit-animation: scale 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: scale 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            @media(max-width: 768px){
+                grid-template-columns: 1fr 1fr;
+            }
         &--is-active{
             display: grid;
 
@@ -27,6 +29,11 @@
     &__tabs{
         display: flex;
         justify-content: center;
+        @media(max-width: 768px){
+            white-space: nowrap;
+            overflow-x: scroll;
+            padding-left: 40px;
+         }
         &__button{
             color: variables.$TextSecondColor;
             font-size: 20px;
@@ -41,6 +48,10 @@
             &--is-active{
                 border-color:variables.$TextSecondColor ;
             }
+
+            @media(max-width: 768px){
+                font-size: 16px;
+             }
         }
     }
 }

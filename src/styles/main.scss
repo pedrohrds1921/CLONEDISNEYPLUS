@@ -2,6 +2,10 @@
 @use 'variables';
 @use 'shows';
 @use'plans';
+@use 'devices';
+@use 'faq';
+@use'footer';
+@use'header';
 @font-face {
     font-family: Avenir;
     src: url('../../assets/Avenir-Regular.woff2');
@@ -43,21 +47,40 @@ line-height: $fontSize + 10px;
 
 .text--Big{
     @include text(18px);
+    @media(max-width: 768px){
+        @include text(15px);
+    }
 }
 .text{
     @include text;
+    @media(max-width: 768px){
+        @include text(14px);
+    }
 }
 .text--Small{
     @include text(12px);
+    @media(max-width: 768px){
+        @include text(11px);
+    }
 }
 .title{
     @include title;
+
+    @media(max-width: 768px){
+        @include title(24px);
+    }
 }
 .title--Big{
-    @include title(44px)
+    @include title(44px);
+    @media(max-width: 768px){
+        @include title(26px);
+    }
 }
 .title--Small{
-    @include title(28px)
+    @include title(28px);
+    @media(max-width: 768px){
+        @include title(22px);
+    }
 }
 .text--Link{
 
@@ -69,9 +92,78 @@ line-height: $fontSize + 10px;
         width: 100%;
         height: 60px;
         color:variables.$TextPrimartColor ;
-        background-color: #6421ff;
+        background-color:variables.$btnprimaryColor;
         text-transform: uppercase;
         border-radius: 4px;
-        margin-top: 2vw;
-        margin-bottom: 8px;
+        text-decoration: none;
+        padding: 8px 14px;
+        letter-spacing: 1px;
+        border: 1px solid variables.$btnprimaryColor;
+        cursor: pointer;
+        &:hover{
+            background-color: lighten(variables.$btnprimaryColor,3%);
+        }
+
+        &--secondary{
+            background-color:variables.$btnSecondColor;
+            border: 1px solid variables.$btnprimaryColor;
+            &:hover{
+
+                background-color: lighten(variables.$btnSecondColor,3%);
+            }
+        }
+        &--dark{
+            background-color:rgba(variables.$btnDarkColor,0.8);
+            border: 1px solid variables.$TextSecondColor;
+            &:hover{
+                background-color: variables.$TextSecondColor;
+                color:variables.$BgColor;
+
+            }
+        }
+    }
+
+        
+
+.image-text-section{
+    padding: 5.6vw;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    @media(max-width: 768px){
+        display: block;
+    }
+    &__text__container{
+        padding: 0 2vw;
+        h2{
+            margin-bottom: 24px;
+        }
+    }
+    img{
+        max-width: 100%;
+    }
+
+    &--image-full-width{
+        display: block;
+        position: relative;
+        img{
+            width: 100%;
+        }
+        &__text__container{
+            position: absolute;
+            top:0;
+            left: 50%;
+            height:100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @media(max-width: 768px){
+               position: relative;
+               left: 0;
+               width: 100%;
+            }
+        }
+
+    }
 }
